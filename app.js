@@ -25,5 +25,16 @@ async function fetchUserData() {
         console.error('Error fetching user data:', error);
     }
 }
+document.getElementById("search").addEventListener("click", async function(e){
+    const id = document.getElementById("user").value
+    const dataUser = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    if (dataUser.ok) {
+        const data = await dataUser.json();
+        console.log(data.name);
+        console.log(data.phone);
+        document.getElementById("users-data").textContent = `"name": ${data.name}, "phone":${data.phone}`  
+    }
+}) 
+
 fetchUserData();
 
