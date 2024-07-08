@@ -1,0 +1,13 @@
+.table-container {
+    text-align: center;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+}
+
+td {
+    padding: 10px;
+    border: 1px solid orange;
+}
